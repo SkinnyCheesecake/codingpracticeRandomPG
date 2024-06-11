@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+.container .text{
+    position: relative;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.container .text.first-text{
+    color: #fff;
+
+}
+
+.text.second-text::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    border-left: 2px solid red;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+       left: 100%; 
+    }
+
+    100%{
+        left: 0%;
+    }
+}
